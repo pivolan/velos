@@ -1,0 +1,191 @@
+Script started on Fri 14 Oct 2011 03:45:08 PM MSK
+[?1034h[root@pivoserver master]# ^C
+[root@pivoserver master]# ^C
+[root@pivoserver master]# ^C
+[root@pivoserver master]# ./script/rails 
+Usage: rails COMMAND [ARGS]
+
+The most common rails commands are:
+ generate    Generate new code (short-cut alias: "g")
+ console     Start the Rails console (short-cut alias: "c")
+ server      Start the Rails server (short-cut alias: "s")
+ dbconsole   Start a console for the database specified in config/database.yml
+             (short-cut alias: "db")
+ new         Create a new Rails application. "rails new my_app" creates a
+             new application called MyApp in "./my_app"
+
+In addition to those, there are:
+ application  Generate the Rails application code
+ destroy      Undo code generated with "generate"
+ benchmarker  See how fast a piece of code runs
+ profiler     Get profile information from a piece of code
+ plugin       Install a plugin
+ runner       Run a piece of code in the application environment (short-cut alias: "r")
+
+All commands can be run with -h for more information.
+[root@pivoserver master]# ./script/rails g
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.3.4/lib/rack/backports/uri/common_192.rb:53: warning: already initialized constant WFKV_
+Usage: rails generate GENERATOR [args] [options]
+
+General options:
+  -h, [--help]     # Print generator's options and usage
+  -p, [--pretend]  # Run but do not make any changes
+  -f, [--force]    # Overwrite files that already exist
+  -s, [--skip]     # Skip files that already exist
+  -q, [--quiet]    # Suppress status output
+
+Please choose a generator below.
+
+Rails:
+  assets
+  controller
+  generator
+  helper
+  integration_test
+  mailer
+  migration
+  model
+  observer
+  performance_test
+  plugin
+  resource
+  scaffold
+  scaffold_controller
+  session_migration
+
+Coffee:
+  coffee:assets
+
+Jquery:
+  jquery:install
+
+Js:
+  js:assets
+
+MongoMapper:
+  mongo_mapper:config
+  mongo_mapper:model
+
+[root@pivoserver master]# ./script/rails g controller index
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.3.4/lib/rack/backports/uri/common_192.rb:53: warning: already initialized constant WFKV_
+[1m[32m      create[0m  app/controllers/index_controller.rb
+[1m[37m      invoke[0m  erb
+[1m[32m      create[0m    app/views/index
+[1m[37m      invoke[0m  test_unit
+[1m[32m      create[0m    test/functional/index_controller_test.rb
+[1m[37m      invoke[0m  helper
+[1m[32m      create[0m    app/helpers/index_helper.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/helpers/index_helper_test.rb
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/index.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/index.css.scss
+[root@pivoserver master]# ./script/rails g controller index[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmongo_mapper:config
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.3.4/lib/rack/backports/uri/common_192.rb:53: warning: already initialized constant WFKV_
+[1m[31m    conflict[0m  config/mongo.yml
+Overwrite /pub/500gb/web/www/velos/master/config/mongo.yml? (enter "h" for help) [Ynaqdh] Y
+[1m[33m       force[0m  config/mongo.yml
+[root@pivoserver master]# ./script/rails g mongo_mapper:config[K[K[K[K[K[Kmodel
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.3.4/lib/rack/backports/uri/common_192.rb:53: warning: already initialized constant WFKV_
+Usage:
+  rails generate mongo_mapper:model NAME [field:type field:type] [options]
+
+Options:
+      [--skip-namespace]       # Skip namespace (affects only isolated applications)
+      [--old-style-hash]       # Force using old style hash (:foo => 'bar') on Ruby >= 1.9
+      [--timestamps]           # Indicates when to generate timestamps
+  -t, [--test-framework=NAME]  # Test framework to be invoked
+                               # Default: test_unit
+
+TestUnit options:
+      [--fixture]                   # Indicates when to generate fixture
+                                    # Default: true
+  -r, [--fixture-replacement=NAME]  # Fixture replacement to be invoked
+
+Runtime options:
+  -f, [--force]    # Overwrite files that already exist
+  -p, [--pretend]  # Run but do not make any changes
+  -q, [--quiet]    # Supress status output
+  -s, [--skip]     # Skip files that already exist
+
+Creates a mongomapper model
+[root@pivoserver master]# ./script/rails g mongo_mapper:model user
+/usr/lib/ruby/gems/1.9.1/gems/rack-1.3.4/lib/rack/backports/uri/common_192.rb:53: warning: already initialized constant WFKV_
+[1m[32m      create[0m  app/models/user.rb
+[1m[37m      invoke[0m  test_unit
+[1m[32m      create[0m    test/unit/user_test.rb
+[1m[32m      create[0m    test/fixtures/users.yml
+[root@pivoserver master]# ls
+app  config  config.ru	db  doc  Gemfile  Gemfile.lock	lib  log  public  Rakefile  README  script  test  tmp  typescript  vendor
+[root@pivoserver master]# cd app
+[root@pivoserver app]# ls
+assets	controllers  helpers  mailers  models  views
+[root@pivoserver app]# cd ..
+[root@pivoserver master]# cd 
+app/          config.ru     doc/          Gemfile.lock  lib/          public/       README        test/         typescript    
+config/       db/           Gemfile       .gitignore    log/          Rakefile      script/       tmp/          vendor/       
+[root@pivoserver master]# cd config/routes.rb 
+bash: cd: config/routes.rb: Not a directory
+[root@pivoserver master]# cd config/routes.rb [1P[1P[1@c[1@a[1@t
+Master::Application.routes.draw do
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
+
+  # Sample of regular route:
+  #   match 'products/:id' => 'catalog#view'
+  # Keep in mind you can assign values other than :controller and :action
+
+  # Sample of named route:
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  # This route can be invoked with purchase_url(:id => product.id)
+
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
+  # Sample resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
+  # Sample resource route with more complex sub-resources
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', :on => :collection
+  #     end
+  #   end
+
+  # Sample resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
+
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
+
+  # See how all your routes lay out with "rake routes"
+
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
+end
+[root@pivoserver master]# cat config/routes.rb [1P[1P[1P[1@n[1@a[1@n[1@o
+[?1049h[1;62r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6                                     File: config/routes.rb                                                                                  [3;1H(B[mMaster::Application.routes.draw do[4;3H# The priority is based upon order of creation:[5;3H# first created -> highest priority.[7;3H# Sample of regular route:[8;3H#   match 'products/:id' => 'catalog#view'[9;3H# Keep in mind you can assign values other than :controller and :action[11;3H# Sample of named route:[12;3H#   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase[13;3H# This route can be invoked with purchase_url(:id => product.id)[15;3H# Sample resource route (maps HTTP verbs to controller actions automatically):[16;3H#   resources :products[18;3H# Sample resource route with options:[19;3H#   resources :products do[20;3H#     member do[21;3H#[11Gget 'short'[22;3H#[11Gpost 'toggle'[23;3H#     end[24;3H#[25d#     collection do[26;3H#[11Gget 'sold'[27;3H#     end[28;3H#   end[30;3H# Sample resource route with sub-resources:[31;3H#   resources :products do[32;3H#     resources :comments, :sales[33;3H#     resource :seller[34;3H#   end[36;3H# Sample resource route with more complex sub-resources[37;3H#   resources :products do[38;3H#     resources :comments[39;3H#     resources :sales do[40;3H#[11Gget 'recent', :on => :collection[41;3H#     end[42;3H#   end[44;3H# Sample resource route within a namespace:[45;3H#   namespace :admin do[46;3H#     # Directs /admin/products/* to Admin::ProductsController[47;3H#     # (app/controllers/admin/products_controller.rb)[48;3H#     resources :products[49;3H#   end[51;3H# You can have the root of your site routed with "root"[52;3H# just remember to delete public/index.html.[53;3H# root :to => 'welcome#index'[55;3H# See how all your routes lay out with "rake routes"[57;3H# This is a legacy wild controller route that's not recommended for RESTful applications.[58;3H# Note: This route will make all actions in every controller accessible via GET requests.[59;3H# match ':controller(/:action(/:id(.:format)))'[60;71H(B[0;7m[ Read 58 lines ][61d^G(B[m Get Help[61;27H(B[0;7m^O(B[m WriteOut[61;53H(B[0;7m^R(B[m Read File[61;79H(B[0;7m^Y(B[m Prev Page[61;105H(B[0;7m^K(B[m Cut Text[61;131H(B[0;7m^C(B[m Cur Pos[62d(B[0;7m^X(B[m Exit[62;27H(B[0;7m^J(B[m Justify[62;53H(B[0;7m^W(B[m Where Is[62;79H(B[0;7m^V(B[m Next Page[62;105H(B[0;7m^U(B[m UnCut Text[62;131H(B[0;7m^T(B[m To Spell[3d  # Note: This route will make all actions in every controller accessible via GET requests.[4;5Hmatch ':controller(/:action(/:id(.:format)))'[5dend[K[7d[K[8d[K[9d[K[11d[K[12d[K[13d[K[15d[K[16d[K[18d[K[19d[K[20d[K[21d[K[22d[K[23d[K[24d[K[25d[K[26d[K[27d[K[28d[K[30d[K[31d[K[32d[K[33d[K[34d[K[36d[K[37d[K[38d[K[39d[K[40d[K[41d[K[42d[K[44d[K[45d[K[46d[K[47d[K[48d[K[49d[K[51d[K[52d[K[53d[K[55d[K[57d[K[58d[K[59d[K[3d[6d[A[A[A[4d  [1;148H(B[0;7mModified[4;3H(B[m[1P[1P  [A[2;59r[2;1H[29T[1;62r[4;3H# Sample resource route with sub-resources:[5;3H#   resources :products do[6;3H#     resources :comments, :sales[7;3H#     resource :seller[8;3H#   end[10;3H# Sample resource route with more complex sub-resources[11;3H#   resources :products do[12;3H#     resources :comments[13;3H#     resources :sales do[14;3H#[11Gget 'recent', :on => :collection[15;3H#     end[16;3H#   end[18;3H# Sample resource route within a namespace:[19;3H#   namespace :admin do[20;3H#     # Directs /admin/products/* to Admin::ProductsController[21;3H#     # (app/controllers/admin/products_controller.rb)[22;3H#     resources :products[23;3H#   end[25;3H# You can have the root of your site routed with "root"[26;3H# just remember to delete public/index.html.[27;3H# root :to => 'welcome#index'[29;3H# See how all your routes lay out with "rake routes"[31;3H# This is a legacy wild controller route that's not recommended for RESTful applications.  [A[A  [A[A  [A[1P[1P  [27d[1P[A#just remember to delete public/index.html.  # just remember to delete public/index.html.[5G[60d[K[27;5H[27;31H[1P[1P[1P[1P[1P[1P[1Pi#index'[18Gn#index'[19Gd#index'[20Ge#index'[21Gx#index'[22G[60d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                                                                                 [61;
