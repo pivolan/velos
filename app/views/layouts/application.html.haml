@@ -1,0 +1,9 @@
+!!!
+%html
+	%head
+		%title Master
+		= stylesheet_link_tag collect_css('.*')
+		= javascript_include_tag collect_js('*')
+		= csrf_meta_tag
+	%body
+		= yield
