@@ -4,15 +4,15 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  database: master_development
+  database: ruby_new_development
 
 test:
   <<: *defaults
-  database: master_test
+  database: ruby_new_test
 
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  database: master
+  database: ruby_new
   username: <%= ENV['MONGO_USERNAME'] %>
   password: <%= ENV['MONGO_PASSWORD'] %>
