@@ -1,8 +1,8 @@
 class IndexController < ApplicationController
 
 	def index
-		vaya = 'jjjj'
-
+		@user = User.find(1)
+		@photos = Photo.all
 	end
 
 	def vasya
