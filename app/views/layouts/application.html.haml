@@ -1,9 +1,84 @@
-!!!
+!!! 5
 %html
-	%head
-		%title Master
-		= stylesheet_link_tag collect_css('.*')
-		= javascript_include_tag collect_js('*')
-		= csrf_meta_tag
-	%body
-		= yield
+  %head
+    %title Hello, my Master!
+    / = stylesheet_link_tag collect_css('.*')
+    / = javascript_include_tag collect_js('*')
+    / = csrf_meta_tag
+  %body
+    :css
+      * div, * nav {
+      	border-radius:5px;
+      }
+      .wrapper {
+      	height: 100%;
+      }
+      .top-wrapper {
+      	height: 110px;
+      	/* border: 1px solid red; */
+      	overflow: hidden;
+      }
+      	.logo-wrapper {
+      		height: 100px;
+      		width: 200px;
+      		float: left;
+      		border: 1px solid brown;
+      		margin-right: -200px;
+      	}
+      	.hello-wrapper {
+      		height: 100px;
+      		border: 1px solid brown;
+      		margin: 0 0 0 210px;
+      	}
+      	.search-wrapper {
+      		height: 80px;
+      		width: 200px;
+      		margin: 10px;
+      		float: right;
+      		border: 1px solid darkRed;
+      	}
+      .middle-line {
+      	margin: 10px 0 10px;
+      	height: 20px;
+      	padding: 10px;
+      	border: 1px solid red;
+      }
+      .menu-wrapper {
+      	display: block;
+      	float: left;
+      	width: 200px;
+      	margin: 0 -200px 0 0;
+      	border: 1px solid red;
+      }
+      .main-menu {
+      	display: block;
+      }
+      	.menu-item {
+      		display: block;
+      	}
+      .content-wrapper {
+      	margin: 0 0 0 210px;
+      	border: 1px solid red;
+      }
+    %div.wrapper
+      %div.top-wrapper
+        %div.logo-wrapper logo
+        %div.hello-wrapper
+          Hello Vasya!
+          %div.search-wrapper search
+      %div.middle-line news / nav / tips
+      %nav.menu-wrapper
+        %ul.main-menu
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+      %div.content-wrapper
+        map / other content
+        %br/
+        %br/
+        = yield
