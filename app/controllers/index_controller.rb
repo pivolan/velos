@@ -10,4 +10,4 @@ class IndexController < ApplicationController
 	def vasya
 
 	end
-end
+end 
