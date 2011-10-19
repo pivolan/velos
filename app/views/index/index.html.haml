@@ -14,12 +14,17 @@
 		%tbody
 			%tr
 				%td#5566.sdfgd
-					вася дурак
-					= @user.to_json
-					= @user.photos.to_json
+					user
+					= @user.to_json(:include => :tracks)
+					%br
+					%br
+					tracks
+					= Track.all.to_json(:include => :user)
 
 %br
-	= @photos.to_json
 	вася
 	привет как дила че делаете?
 	%input{:value=>' федя ', :name=>'txt', :type=>'text'}
+- append_title(' ты кто такой ')
+- prepend_title(' вася ')
+- prepend_title(@user.name)

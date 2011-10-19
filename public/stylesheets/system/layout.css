@@ -1,0 +1,63 @@
+	* div, * nav {
+		border-radius: 5px;
+	}
+
+	.wrapper {
+		height: 100%;
+	}
+
+	.top-wrapper {
+		height: 110px;
+		/* border: 1px solid red; */
+		overflow: hidden;
+	}
+
+	.logo-wrapper {
+		height: 100px;
+		width: 200px;
+		float: left;
+		border: 1px solid brown;
+		margin-right: -200px;
+	}
+
+	.hello-wrapper {
+		height: 100px;
+		border: 1px solid brown;
+		margin: 0 0 0 210px;
+	}
+
+	.search-wrapper {
+		height: 80px;
+		width: 200px;
+		margin: 10px;
+		float: right;
+		border: 1px solid darkRed;
+	}
+
+	.middle-line {
+		margin: 10px 0 10px;
+		height: 20px;
+		padding: 10px;
+		border: 1px solid red;
+	}
+
+	.menu-wrapper {
+		display: block;
+		float: left;
+		width: 200px;
+		margin: 0 -200px 0 0;
+		border: 1px solid red;
+	}
+
+	.main-menu {
+		display: block;
+	}
+
+	.menu-item {
+		display: block;
+	}
+
+	.content-wrapper {
+		margin: 0 0 0 210px;
+		border: 1px solid red;
+	}

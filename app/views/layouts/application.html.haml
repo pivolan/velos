@@ -1,9 +1,28 @@
 !!!
 %html
-	%head
-		%title Master
-		= stylesheet_link_tag collect_css('.*')
-		= javascript_include_tag collect_js('*')
-		= csrf_meta_tag
-	%body
-		= yield
+  %head
+    %title
+      = title
+    = stylesheet_link_tag collect_css('*')
+    = javascript_include_tag collect_js('*')
+    = csrf_meta_tag
+  %body
+    .wrapper
+      .top-wrapper
+        .logo-wrapper logo
+        .hello-wrapper
+          = title
+          .search-wrapper search
+      .middle-line news / nav / tips
+      %nav.menu-wrapper
+        %ul.main-menu
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+          %li.main-menu-item
+            %a{:href => "/test"} Test
+      .content-wrapper
+        = yield
