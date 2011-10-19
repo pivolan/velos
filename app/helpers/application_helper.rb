@@ -18,4 +18,16 @@ module ApplicationHelper
 			scripts
 		end
 	end
+
+	def title
+		scripts = @title
+	end
+
+	def append_title (pattern)
+		@title += pattern
+	end
+
+	def prepend_title (pattern)
+		@title = pattern + @title
+	end
 end
