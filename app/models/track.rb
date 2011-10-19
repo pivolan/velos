@@ -5,4 +5,4 @@ class Track
 	key :name, String
   belongs_to :user
 	#geo_key :coords, Array
-end
+end 

@@ -13,7 +13,7 @@ class IndexController < ApplicationController
 	  @user.save
   end
 
-  def vasya
+  def vasya 
 
   end
 end
