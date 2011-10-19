@@ -6,4 +6,4 @@ class User
 	key :karma, Integer
 	many :tracks
 	many :photos
-end
+end 
