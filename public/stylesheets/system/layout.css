@@ -4,80 +4,91 @@
 html, body {
 	height: 100%;
 }
-	* div, * nav, footer, section {
+* div, * nav, footer, section {
 		border-radius: 5px;
 	}
 
-	.wrapper {
-		width: 90%;
-		min-height: 100%;
-		height: 100%;
-		margin: 0 auto -60px;
-	}
+.wrapper {
+	width: 90%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -42px; /* the bottom margin is the negative value of the footer's height */
+}
 
-	header {
-		height: 110px;
-		/* border: 1px solid red; */
-		overflow: hidden;
-	}
+header {
+	height: 110px;
+	overflow: hidden;
+}
 
-	.logo-wrapper {
-		height: 100px;
-		width: 200px;
-		float: left;
-		border: 1px solid brown;
-		margin-right: -200px;
-	}
+.logo-wrapper {
+	height: 100px;
+	width: 200px;
+	float: left;
+	border: 1px solid brown;
+	margin-right: -200px;
+}
 
-	.hello-wrapper {
-		height: 100px;
-		border: 1px solid brown;
-		margin: 0 0 0 210px;
-	}
+.hello-wrapper {
+	height: 100px;
+	border: 1px solid brown;
+	margin: 0 0 0 210px;
+}
 
-	.search-wrapper {
-		height: 80px;
-		width: 200px;
-		margin: 10px;
-		float: right;
-		border: 1px solid darkRed;
-	}
+.search-wrapper {
+	height: 80px;
+	width: 200px;
+	margin: 10px;
+	float: right;
+	border: 1px solid darkRed;
+}
 
-	.middle-line {
-		margin: 10px 0 10px;
-		height: 20px;
-		padding: 10px;
-		border: 1px solid red;
-	}
+.middle-line {
+	margin: 10px 0 10px;
+	height: 20px;
+	padding: 10px;
+	border: 1px solid red;
+}
 
-	.menu-wrapper {
-		display: block;
-		float: left;
-		width: 200px;
-		margin: 0 -200px 0 0;
-		border: 1px solid red;
-		overflow: hidden;
-	}
+.menu-wrapper {
+	display: block;
+	float: left;
+	width: 200px;
+	margin: 0 -200px 0 0;
+	border: 1px solid red;
+	overflow: hidden;
+}
 
-	.main-menu {
-		display: block;
-	}
+.main-menu {
+	display: block;
+}
 
-	.menu-item {
-		display: block;
-	}
+.menu-item {
+	display: block;
+}
 
-	.content-wrapper {
-		margin: 0 0 0 210px;
-		border: 1px solid red;
-		overflow: hidden;
-	}
+.content-wrapper {
+	margin: 0 0 0 210px;
+	border: 1px solid red;
+	overflow: hidden;
+}
 
 footer {
 	width: 90%;
-	display: block;
 	border: 1px solid black;
-	clear: both;
-	margin: 10px auto 0;
-	height: 30px;
+	padding: 10px 0;
+	margin: 0 auto;
+	height: 20px;
+}
+
+.for-footer {
+	height: 42px;
+}
+
+form {
+
+}
+
+form.form-main {
+	width: 90%;
 }
