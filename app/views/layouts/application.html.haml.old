@@ -5,8 +5,10 @@
     %title
       = title
     = stylesheet_link_tag collect_css('*')
+    %script{:src => "/javascripts/jquery-1.6.4.min.js", :type => "text/javascript"}
     = javascript_include_tag collect_js('*')
     = csrf_meta_tag
+    %script{:src => "http://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
   %body
     .wrapper
       %header.top-wrapper
@@ -38,7 +40,7 @@
                 %input{:type => "text", :name => "track-filter", :id => "track-filter"}
             %hr
             %p Либо создайте трек с нуля
-            %track-map-create
+            .track-map-create
               
           %fieldset
             %p Обязательные поля
