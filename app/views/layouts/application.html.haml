@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    %meta{:charset => "UTF-8"}
     %title
       = title
     = stylesheet_link_tag collect_css('*')
@@ -8,7 +9,7 @@
     = csrf_meta_tag
   %body
     .wrapper
-      .top-wrapper
+      %header.top-wrapper
         .logo-wrapper logo
         .hello-wrapper
           = title
@@ -24,5 +25,19 @@
             %a{:href => "/test"} Test
           %li.main-menu-item
             %a{:href => "/test"} Test
-      .content-wrapper
+      %section.content-wrapper
         = yield
+      %section.content-wrapper
+        %h1 Создание покатушки
+        %form{:action => "/"}
+          %fieldset
+            %p Обязательные поля
+            %dl
+              %dt
+                %label{:for => "start-date"} Дата старта
+              %dd
+                %input{:type => "datetime-local", :name => "start-date", :id => "start-date"}
+    %footer
+      copyright etc
+      %a{:href => "http://validator.w3.org/check?uri=http%3A%2F%2Fdachiko.egop.ru%2F"}
+        Проверить html на валидность
