@@ -21,13 +21,15 @@
 					tracks
 					= Track.all.to_json
 					%br
-					tracks
-					= Track.where(:coords.within => { "$center" => [[50,30], 2]}).all.to_json
+					tracks find
+					= Track.where(:coords.within => { "$center" => [[3,104], 5]}).all.to_json
 
 %br
 	вася
 	привет как дила че делаете?
-	%input{:value=>' федя ', :name=>'txt', :type=>'text'}
+	%br
+	%canvas#myCanvas.canvas{:width=>500, :height=>300}
+		= Track.all.to_json
 - append_title(' ты кто такой ')
 - prepend_title(' вася ')
 - prepend_title(@user.name)
