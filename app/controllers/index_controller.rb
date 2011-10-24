@@ -20,7 +20,18 @@ class IndexController < ApplicationController
 	end
 
 	def track
-		
+		# поиск в центре
+		@tracks = Track.where(:coords.within => { "$center" => [[3,104], 5]}).all.to_json
+		# создание трека со списком точек. [[x,y], [x,y]]
+		track = Track.create(
+						:_id => 1,
+						:name => 'new',
+		        :coords => [[70, 8], [10, 150], [70, 45]]
+		)
+		# хитрое преобразование json с вытаскиванием связанных объектов из базы
+		json_user_data = @user.to_json(:include => :tracks)
+		# достать все объекты этого типа из базы
+		@tracks = Track.all.to_json
 	end
 
 	def json
