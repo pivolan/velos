@@ -1,4 +1,6 @@
 class IndexController < ApplicationController
+	skip_before_filter :login, :only => [:track] #
+	#skip_after_filter :login, :only => [:track]
 
 	def index
 		@user = User.find(5)
@@ -19,5 +21,12 @@ class IndexController < ApplicationController
 
 	def track
 		
+	end
+
+	def json
+		respond_to do |format|
+			format.html
+			format.json { render :json => @user }
+		end
 	end
 end

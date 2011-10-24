@@ -56,4 +56,5 @@ Fuck::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   match 'asdvss', :to => "index#vasya"
   match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(.:format))'
 end
