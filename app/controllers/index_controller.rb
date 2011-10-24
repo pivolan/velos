@@ -19,6 +19,10 @@ class IndexController < ApplicationController
 		#@user.save
 	end
 
+  def map
+
+  end
+
 	def track
 		# поиск в центре
 		@tracks = Track.where(:coords.within => { "$center" => [[3,104], 5]}).all.to_json
@@ -40,4 +44,13 @@ class IndexController < ApplicationController
 			format.json { render :json => @user }
 		end
 	end
+
+	def result
+	  tracks = {
+	          :lat =>params[:lat],
+	          :lon => params[:lon]
+					  }
+	  render :json => tracks
+	end
+
 end
