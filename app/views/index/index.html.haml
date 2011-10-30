@@ -7,9 +7,10 @@
 		вася дура
 		писька
 	#vas.fghh
-		пипец
+		пипецугу
 	#url
 		= link_to 'sdfsdf', :action => :vasya
+		= link_to 'sdfsdf', :action => :vasya, :controller => :index
 	%table
 		%tbody
 			%tr
@@ -28,6 +29,7 @@
 	вася
 	привет как дила че делаете?
 	%br
+	#map_canvas
 	%canvas#myCanvas.canvas{:width=>500, :height=>300}
 		= Track.all.to_json
 - append_title(' ты кто такой ')
