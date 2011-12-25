@@ -1,4 +1,4 @@
-Fuck::Application.configure do
+Pivo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -22,5 +22,6 @@ Fuck::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+	config.action_controller.session_store = :mem_cache_store
 end
 

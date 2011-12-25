@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Fuck::Application.load_tasks
+Pivo::Application.load_tasks
