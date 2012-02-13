@@ -3,7 +3,7 @@ class IndexController < ApplicationController
 	#skip_after_filter :login, :only => [:track]
 
 	def index
-		@user = User.find(5)
+		@user = User.create(:_id => 1, :name=>'sdf')
 		#for track in Track.all
 		#	Track.delete(track._id)
 		#end
@@ -16,7 +16,7 @@ class IndexController < ApplicationController
 		#@photos = Photo.all
 		#Photo.create(:title => 'sdfsd')
 		#@user.photos.push(@photos)
-		#@user.save
+		@user.save
 	end
 
   def map
