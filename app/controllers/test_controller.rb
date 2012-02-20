@@ -1,6 +1,6 @@
 class TestController < ApplicationController
 	def index
-		@user = User.find(5)
+		@user = User_.find(5)
 		#for track in Track.all
 		#	Track.delete(track._id)
 		#end
