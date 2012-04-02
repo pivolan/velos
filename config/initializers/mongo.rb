@@ -1,4 +1,4 @@
-MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
+MongoMapper.connection = Mongo::Connection.new('pivo.egop.ru', 27017)
 #MongoMapper.database = "#myapp-#{Rails.env}"
 MongoMapper.database = "velos"
 

@@ -6,7 +6,7 @@ gem "mongo_geo"
 gem 'will_paginate'
 gem 'nokogiri'
 gem 'haml'
-
+gem 'therubyracer', :platform => :ruby
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

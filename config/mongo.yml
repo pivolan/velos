@@ -1,5 +1,5 @@
 defaults: &defaults
-  host: 127.0.0.1
+  host: 78.47.59.131
   port: 27017
 
 development:
