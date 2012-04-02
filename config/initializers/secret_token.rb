@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Pivo::Application.config.secret_token = '2a71e1c73ac54402902fdd3a376a38f230e4c5a86683260115308e7e51b9febd8327cdd04d5c1deef986b46952e9d56f18c77daecd9d3fcbfae21e45221d98db'
+Pivo::Application.config.secret_token = '126910c738a6d505b53f1474759560fb30a0c3dcc8833b3c0daa89ab9fa8ba1bb12436c3731aff18427dc3377c8dcff7048facc516235c2d7cde9dfa5e832a64'

@@ -1,117 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='UTF-8'>
-  <title><%= title %></title>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
-  <%= stylesheet_link_tag collect_css('*') %>
-  <%= javascript_include_tag collect_js('/jquery/*') %>
-  <%= javascript_include_tag collect_js('/core/*') %>
-  <%= javascript_include_tag collect_js('*') %>
-  <%= csrf_meta_tag %>
+  <title>Pivo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
-<div class='wrapper'>
-  <header class='top-wrapper'>
-    <div class='logo-wrapper'>logo</div>
-    <div class='hello-wrapper'>
-      Hello Vasya <%= title %>
-      <div class='search-wrapper'>search</div>
-    </div>
-  </header>
-      <aside class='middle-line'>news / nav / tips</aside>
-      <nav class='menu-wrapper'></nav>
-      <section class='content-wrapper'>
-        <%= yield %>
-      </section>
-      <section class='content-wrapper'>
-        <h1>Создание покатушки</h1>
-        <form action='/' class='form-main form-create-ride'>
-          <fieldset>
-            <dl>
-              <dt>
-                <label for='track-filter'>Найдите подходящий трек</label>
-              </dt>
-              <dd>
-                <input id='track-filter' name='track-filter' type='text'>
-              </dd>
-            </dl>
-            <hr>
-            <p>Либо создайте трек с нуля</p>
-            <div class='track-map-create'></div>
-          </fieldset>
-          <fieldset>
-            <p>Обязательные поля</p>
-            <dl>
-              <dt>
-                <label for='start-date'>Дата старта</label>
-              </dt>
-              <dd>
-                <input id='start-date' name='start-date' type='datetime-local'>
-              </dd>
-            </dl>
-          </fieldset>
-          <fieldset>
-            <p>Необязательные поля</p>
-            <dl>
-              <dt>
-                <label for='end-date'>Дата финиша</label>
-              </dt>
-              <dd>
-                <input id='end-date' name='end-date' type='datetime-local'>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for='description'>Описание</label>
-              </dt>
-              <dd>
-                <textarea cols='100' id='description' name='description' rows='3'></textarea>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for='member-requirements'>Требования к участникам</label>
-              </dt>
-              <dd>
-                <textarea cols='100' id='member-requirements' name='member-requirements' rows='3'></textarea>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for='ride-tags'>Тэги покатушки</label>
-              </dt>
-              <dd>
-                <input id='ride-tags' name='ride-tags' type='text'>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for='ride-invite'>Пригласить</label>
-              </dt>
-              <dd>
-                <input id='ride-invite' name='ride-invite' type='text'>
-              </dd>
-            </dl>
-          </fieldset>
-          <fieldset>
-            <input type='submit' value='Создать!'>
-            <input type='reset' value='Сбросить!'>
-          </fieldset>
-        </form>
-      </section>
-      <div class='for-footer'></div>
-    </div>
-    <footer>
-      copyright etc
-      <a href='http://validator.w3.org/check?uri=http%3A%2F%2Fdachiko.egop.ru%2F'>
-        Проверить html на валидность
-      </a>
-    </footer>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				Core.init();
-			});
-		</script>
-  </body>
+
+<%= yield %>
+
+</body>
 </html>
