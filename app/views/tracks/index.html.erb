@@ -1,0 +1,33 @@
+<h1>Listing tracks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Rides</th>
+    <th>Photos</th>
+    <th>Videos</th>
+    <th>Coords</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tracks.each do |track| %>
+  <tr>
+    <td><%= track.title %></td>
+    <td><%= track.author %></td>
+    <td><%= track.rides %></td>
+    <td><%= track.photos %></td>
+    <td><%= track.videos %></td>
+    <td><%= track.coords %></td>
+    <td><%= link_to 'Show', track %></td>
+    <td><%= link_to 'Edit', edit_track_path(track) %></td>
+    <td><%= link_to 'Destroy', track, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Track', new_track_path %>

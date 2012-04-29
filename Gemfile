@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem "mongoid"
 gem "mongo_mapper"
 gem "mongo_geo"
 gem 'will_paginate'

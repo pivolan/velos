@@ -1,0 +1,41 @@
+<%= form_for(@track) do |f| %>
+  <% if @track.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+      <ul>
+      <% @track.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :rides %><br />
+    <%= f.text_field :rides %>
+  </div>
+  <div class="field">
+    <%= f.label :photos %><br />
+    <%= f.text_field :photos %>
+  </div>
+  <div class="field">
+    <%= f.label :videos %><br />
+    <%= f.text_field :videos %>
+  </div>
+  <div class="field">
+    <%= f.label :coords %><br />
+    <%= f.text_field :coords %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

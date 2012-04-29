@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @track.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @track.author %>
+</p>
+
+<p>
+  <b>Rides:</b>
+  <%= @track.rides %>
+</p>
+
+<p>
+  <b>Photos:</b>
+  <%= @track.photos %>
+</p>
+
+<p>
+  <b>Videos:</b>
+  <%= @track.videos %>
+</p>
+
+<p>
+  <b>Coords:</b>
+  <%= @track.coords %>
+</p>
+
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>
